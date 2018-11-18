@@ -2,3 +2,4 @@
 *.toml
 *.xml
 *.log
+./data

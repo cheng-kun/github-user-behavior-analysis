@@ -79,7 +79,7 @@ func SaveFiles(pathName string) error  {
 
 	logs.PrintLogger().Infof("year %d month %d day %d hour %d", now.Year(), now.Month(), now.Day(), now.Hour())
 
-	for year := now.Year(); year >= 2011; year-- {
+	for year := now.Year(); year >= 2018; year-- {
 		endMonth := time.December
 		if year == now.Year() {
 			endMonth = now.Month()
