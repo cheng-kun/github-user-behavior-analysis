@@ -1,6 +1,9 @@
 package conf
 
-import "github.com/BurntSushi/toml"
+import (
+	"github.com/BurntSushi/toml"
+	"github.com/github-user-behavior-analysis/logs"
+)
 
 type Config struct {
 	GithubarchivePath string `json:"githubarchive_path"`
@@ -25,6 +28,7 @@ func LoadConfigFile(fileName string) (*Config, error) {
 	conf := &Config{}
 	_, err := toml.DecodeFile(fileName, &conf)
 	if err != nil {
+		logs.PrintLogger().Error(err)
 		return nil, err
 	}
 
