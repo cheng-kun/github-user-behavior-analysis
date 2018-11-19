@@ -1,8 +1,11 @@
-package githubanalysis
+package db
 
 import (
 	"database/sql"
 	"fmt"
+	"github.com/github-user-behavior-analysis/logs"
+	"github.com/github-user-behavior-analysis/models"
+	"strings"
 	"time"
 
 	"github.com/github-user-behavior-analysis/conf"
@@ -13,6 +16,22 @@ import (
 // Database connection to the github postgres database
 type Database struct {
 	*sql.DB
+}
+
+var ConnDB *Database
+
+func init()  {
+	cfg, err := conf.LoadConfigFile("/home/nebula-ai-chengkun/gopath/src/github.com/github-user-behavior-analysis/conf/config.toml")
+	if err != nil {
+		logs.PrintLogger().Error(err)
+		return
+	}
+
+	ConnDB, err = Connect(*cfg)
+	if err != nil {
+		logs.PrintLogger().Error(err)
+		return
+	}
 }
 
 // Connect to the database
@@ -240,4 +259,93 @@ func (conn *Database) InsertOrganizationMembers(orgid int64, orgname string, mem
 
 	_, err := conn.Exec(sql, orgid, pq.Array(memberids), fetchtime, statuscode)
 	return err
+}
+
+func (conn *Database) SaveTopTenRanking(ranking *models.Ranking) error {
+	sql := `INSERT INTO top_ten (repo_num, time_stamp, n1lang, n1num, n2lang, n2num, n3lang, n3num, n4lang, n4num, n5lang, n5num, n6lang, n6num, n7lang, n7num, n8lang, n8num, n9lang, n9num, n10lang, n10num) 
+			VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22)`
+
+
+
+	_, err := conn.Exec(sql, ranking.RepoNum,
+		ranking.TimeStamp,
+		ranking.N1lang,
+		ranking.N1num,
+		ranking.N2lang,
+		ranking.N2num,
+		ranking.N3lang,
+		ranking.N3num,
+		ranking.N4lang,
+		ranking.N4num,
+		ranking.N5lang,
+		ranking.N5num,
+		ranking.N6lang,
+		ranking.N6num,
+		ranking.N7lang,
+		ranking.N7num,
+		ranking.N8lang,
+		ranking.N8num,
+		ranking.N9lang,
+		ranking.N9num,
+		ranking.N10lang,
+		ranking.N10num)
+
+	if err == nil {
+		logs.PrintLogger().Infof("Successfully insert repo_num %d", ranking.RepoNum)
+	}
+
+
+	return err
+}
+
+func (conn *Database) GetRankInfoByLanguage(lan string) ([]*models.LangaugeRank, error) {
+	sqlQuery := `select n1num as amount, time_stamp, 1 as rank from top_ten where lower(n1lang) = $1
+union
+select n2num as amount, time_stamp, 2 as rank from top_ten where lower(n2lang) = $1
+union
+select n3num as amount, time_stamp, 3 as rank from top_ten where lower(n3lang) = $1
+union
+select n4num as amount, time_stamp, 4 as rank from top_ten where lower(n4lang) = $1
+union
+select n5num as amount, time_stamp, 5 as rank from top_ten where lower(n5lang) = $1
+union
+select n6num as amount, time_stamp, 6 as rank from top_ten where lower(n6lang) = $1
+union
+select n7num as amount, time_stamp, 7 as rank from top_ten where lower(n7lang) = $1
+union
+select n8num as amount, time_stamp, 8 as rank from top_ten where lower(n8lang) = $1
+union
+select n9num as amount, time_stamp, 9 as rank from top_ten where lower(n9lang) = $1
+union
+select n10num as amount, time_stamp, 10 as rank from top_ten where lower(n10lang) = $1
+order by time_stamp;`
+
+	lanLowerCase := strings.ToLower(strings.TrimSpace(lan))
+
+	rows, err := conn.Query(sqlQuery, lanLowerCase)
+	if err != nil {
+		logs.PrintLogger().Error(err)
+		return nil, err
+	}
+	defer rows.Close()
+
+	languageRanks := make([]*models.LangaugeRank,0)
+
+	var amountN, rankN sql.NullInt64
+	var timeStampN sql.NullString
+
+	for rows.Next() {
+
+		languageRank := &models.LangaugeRank{}
+
+		err = rows.Scan(&amountN, &timeStampN, &rankN )
+
+		languageRank.Amount = amountN.Int64
+		languageRank.TimeStamp = timeStampN.String
+		languageRank.Rank = rankN.Int64
+
+		languageRanks = append(languageRanks, languageRank)
+	}
+
+	return languageRanks, err
 }

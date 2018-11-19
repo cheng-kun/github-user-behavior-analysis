@@ -3,6 +3,7 @@ package github_archive
 import (
 	"errors"
 	"fmt"
+	"github.com/github-user-behavior-analysis/conf"
 	"github.com/github-user-behavior-analysis/logs"
 	"io"
 	"net/http"
@@ -106,3 +107,4 @@ func SaveFiles(pathName string) error  {
 	}
 	return nil
 }
+
