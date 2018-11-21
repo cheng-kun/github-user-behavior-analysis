@@ -32,5 +32,7 @@ func LoadConfigFile(fileName string) (*Config, error) {
 		return nil, err
 	}
 
+	logs.PrintLogger().Info("Load config file successfully!")
+
 	return conf, nil
 }

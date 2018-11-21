@@ -20,7 +20,9 @@ func StartWebRequest()  {
 		ValidateHeaders: false,
 	}))
 
-	GetLanguageRankByLanguage(r)
+	go GetLanguageRankByLanguage(r)
+
+	go GetDailyRankByDate(r)
 
 	r.Run(":8080")
 

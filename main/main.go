@@ -1,18 +1,11 @@
 package main
 
 import (
-	"github.com/github-user-behavior-analysis/conf"
 	"github.com/github-user-behavior-analysis/controller"
 	"github.com/github-user-behavior-analysis/db"
-	"github.com/github-user-behavior-analysis/github-archive"
+	"github.com/github-user-behavior-analysis/web-service"
 )
 
-func SaveArchiveFiles(fileName string) {
-	conf, err := conf.LoadConfigFile(fileName)
-	if err == nil {
-		github_archive.SaveFiles(conf.GithubarchivePath)
-	}
-}
 
 func SaveTenTop(filename string, conn db.Database)  {
 
@@ -31,20 +24,8 @@ func SaveTenTop(filename string, conn db.Database)  {
 }
 
 func main()  {
-	//SaveArchiveFiles("./conf/config.toml")
 
-	conf, err := conf.LoadConfigFile("./conf/config.toml")
-	if err != nil {
-		return
-	}
-	//logs.PrintLogger().Info(conf, err)
+	//SaveTenTop("./data/github3.txt", *db)
 
-
-	db, err := db.Connect(*conf)
-	//logs.PrintLogger().Info(db, err)
-
-
-
-
-	SaveTenTop("./data/github3.txt", *db)
+	web_service.StartWebRequest()
 }

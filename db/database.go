@@ -3,14 +3,11 @@ package db
 import (
 	"database/sql"
 	"fmt"
+	"github.com/github-user-behavior-analysis/conf"
 	"github.com/github-user-behavior-analysis/logs"
 	"github.com/github-user-behavior-analysis/models"
 	"strings"
-	"time"
-
-	"github.com/github-user-behavior-analysis/conf"
-	"github.com/google/go-github/github"
-	"github.com/lib/pq"
+	_ "github.com/lib/pq"
 )
 
 // Database connection to the github postgres database
@@ -21,7 +18,10 @@ type Database struct {
 var ConnDB *Database
 
 func init()  {
-	cfg, err := conf.LoadConfigFile("/home/nebula-ai-chengkun/gopath/src/github.com/github-user-behavior-analysis/conf/config.toml")
+
+	logs.PrintLogger().Info("initilizing database connection ... ")
+
+	cfg, err := conf.LoadConfigFile("./config.toml")
 	if err != nil {
 		logs.PrintLogger().Error(err)
 		return
@@ -32,6 +32,8 @@ func init()  {
 		logs.PrintLogger().Error(err)
 		return
 	}
+
+	logs.PrintLogger().Info("Setup database connection sucessfully! ")
 }
 
 // Connect to the database
@@ -46,223 +48,8 @@ func Connect(cfg conf.Config) (*Database, error) {
 	return &Database{DB: db}, nil
 }
 
-// InsertUserStatus updates the statuscode/fetchtime associated with a user in the case that it
-// can't be fetched
-func (conn *Database) InsertUserStatus(id int64, login string, statuscode int, fetchtime time.Time) error {
-	sql := `INSERT INTO users (id, login, fetched, statuscode) VALUES ($1, $2, $3, $4)
-		ON CONFLICT(id) DO UPDATE SET fetched=$3, statuscode=$4`
-
-	// TODO: don't use prepare?
-	stmt, err := conn.Prepare(sql)
-	if err != nil {
-		fmt.Printf("Failed to prepare: %s\n", err.Error())
-		return err
-	}
-
-	_, err = stmt.Exec(id, login, fetchtime, statuscode)
-	if err != nil {
-		fmt.Printf("Failed to exec: %s\n", err.Error())
-		return err
-	}
-	return err
-}
-
-// InsertUser inserts a github.User object into the database
-func (conn *Database) InsertUser(statuscode *int, fetchtime *time.Time, user *github.User, upsert bool) error {
-	sql := `INSERT INTO users (id, login, name, company, location, bio, email, type, followers, following,
-		   created, modified, fetched, statuscode, blog)
-	VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) `
-	if upsert {
-		sql += `ON CONFLICT(id) DO UPDATE SET login=$2, name=$3, company=$4, location=$5, bio=$6, email=$7, type=$8,
-				 followers=$9, following=$10, created=$11, modified=$12, fetched=$13, statuscode=$14, blog=$15`
-	} else {
-		sql += `ON CONFLICT(id) DO NOTHING`
-	}
-
-	var modified *time.Time
-	if user.UpdatedAt != nil {
-		modified = &user.UpdatedAt.Time
-	}
-
-	var created *time.Time
-	if user.CreatedAt != nil {
-		created = &user.CreatedAt.Time
-	}
-
-	_, err := conn.Exec(sql, user.GetID(),
-		user.GetLogin(),
-		user.Name,
-		user.Company,
-		user.Location,
-		user.Bio,
-		user.Email,
-		user.Type,
-		user.Followers,
-		user.Following,
-		created,
-		modified,
-		fetchtime,
-		statuscode,
-		user.Blog)
-	return err
-}
-
-// InsertRepoStatus updates the statuscode/fetchtime associated with a repo in the case that it
-// can't be fetched
-func (conn *Database) InsertRepoStatus(repoid int64, reponame string, statuscode int, fetchtime time.Time, upsert bool) error {
-	sql := `INSERT INTO repos (id, name, fetched, statuscode) VALUES ($1, $2, $3, $4)`
-
-	if upsert {
-		sql += ` ON CONFLICT(id) DO UPDATE SET name=$2, fetched=$3, statuscode=$4`
-	} else {
-		sql += ` ON CONFLICT(id) DO NOTHING`
-	}
-
-	stmt, err := conn.Prepare(sql)
-	if err != nil {
-		fmt.Printf("Failed to prepare: %s\n", err.Error())
-		return err
-	}
-
-	_, err = stmt.Exec(repoid, reponame, fetchtime, statuscode)
-	return err
-}
-
-// InsertRepo inserts a github.Repository object into the database
-func (conn *Database) InsertRepo(statuscode *int, fetchtime *time.Time, repo *github.Repository, upsert bool) error {
-	sql := `INSERT INTO repos (id, name, language, description, size, stars, forks, topics, parentid,
-							   ownerid, created, modified, fetched, statuscode, license, homepage)
-			VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)`
-	if upsert {
-		sql += ` ON CONFLICT(id) DO UPDATE SET name=$2, language=$3, description=$4, size=$5, stars=$6,
-			    forks=$7, topics=$8, parentid=$9, ownerid=$10, created=$11, modified=$12, fetched=$13,
-			    statuscode=$14, license=$15, homepage=$16`
-	} else {
-		sql += ` ON CONFLICT(id) DO NOTHING`
-	}
-
-	owner := repo.GetOwner()
-	var ownerid *int64
-	if owner != nil {
-		ownerid = owner.ID
-		err := conn.InsertUser(nil, nil, owner, false)
-		if err != nil {
-			return err
-		}
-	}
-
-	var parentid *int64
-	parent := repo.GetParent()
-	if parent != nil {
-		// If we have a parent, insert the parent if its missing
-		err := conn.InsertRepo(nil, nil, parent, false)
-		if err != nil {
-			return err
-		}
-		parentid = parent.ID
-	}
-
-	var modified *time.Time
-	if repo.PushedAt != nil {
-		modified = &repo.PushedAt.Time
-	}
-
-	var created *time.Time
-	if repo.CreatedAt != nil {
-		created = &repo.CreatedAt.Time
-	}
-
-	_, err := conn.Exec(sql, repo.GetID(),
-		repo.GetFullName(),
-		repo.Language,
-		repo.Description,
-		repo.GetSize(),
-		repo.GetStargazersCount(),
-		repo.GetForksCount(),
-		pq.Array(repo.Topics),
-		parentid,
-		ownerid,
-		created,
-		modified,
-		fetchtime,
-		statuscode,
-		repo.GetLicense().GetKey(),
-		repo.GetHomepage())
-
-	if err != nil {
-		fmt.Printf("Failed to insert github repo: %s", err.Error())
-		return err
-	}
-
-	return nil
-}
-
-// HasRepo returns whether the repo has been fetched
-func (conn *Database) HasRepo(repoid int64) (bool, error) {
-	// TODO: this doesn't seem all that good
-	rows, err := conn.Query("SELECT fetched from repos where id=$1 and fetched is not null", repoid)
-	if err != nil {
-		return false, err
-	}
-
-	defer rows.Close()
-	for rows.Next() {
-		var fetched time.Time
-		if err := rows.Scan(&fetched); err != nil {
-			return false, err
-		}
-		return true, nil
-	}
-
-	return false, nil
-}
-
-// HasUser returns whether the user has been fetched
-func (conn *Database) HasUser(userid int64) (bool, error) {
-	// TODO: this doesn't seem all that good
-	rows, err := conn.Query("SELECT fetched from users where id=$1 and fetched is not null", userid)
-	if err != nil {
-		return false, err
-	}
-
-	defer rows.Close()
-	for rows.Next() {
-		var fetched time.Time
-		if err := rows.Scan(&fetched); err != nil {
-			return false, err
-		}
-		return true, nil
-	}
-
-	return false, nil
-}
-
-// InsertOrganizationMembers inserts or updates the list of public organization members in the database
-func (conn *Database) InsertOrganizationMembers(orgid int64, orgname string, members []*github.User, statuscode int, fetchtime time.Time, upsert bool) error {
-	// Insert a stub user if not already fetched for each user in the organization
-	// Note purposefully setting statuscode/fetched time to nil here to mark as not fetched
-	// and setting upsert flag to false to prevent overwriting good data
-	var memberids []int64
-	for _, user := range members {
-		memberids = append(memberids, *user.ID)
-		conn.InsertUser(nil, nil, user, false)
-	}
-
-	fmt.Printf("Writing: %s - %d members\n", orgname, len(memberids))
-
-	sql := `INSERT INTO organization_members (organization, members, fetched, statuscode) VALUES ($1, $2, $3, $4)`
-	if upsert {
-		sql += ` ON CONFLICT(organization) DO UPDATE SET members=$2, fetched=$3, statuscode=$4`
-	} else {
-		sql += ` ON CONFLICT(id) DO NOTHING`
-	}
-
-	_, err := conn.Exec(sql, orgid, pq.Array(memberids), fetchtime, statuscode)
-	return err
-}
-
 func (conn *Database) SaveTopTenRanking(ranking *models.Ranking) error {
-	sql := `INSERT INTO top_ten (repo_num, time_stamp, n1lang, n1num, n2lang, n2num, n3lang, n3num, n4lang, n4num, n5lang, n5num, n6lang, n6num, n7lang, n7num, n8lang, n8num, n9lang, n9num, n10lang, n10num) 
+	sql := `INSERT INTO top_ten (repo_num, time_stamp, n1lang, n1num, n2lang, n2num, n3lang, n3num, n4lang, n4num, n5lang, n5num, n6lang, n6num, n7lang, n7num, n8lang, n8num, n9lang, n9num, n10lang, n10num)
 			VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22)`
 
 
@@ -348,4 +135,52 @@ order by time_stamp;`
 	}
 
 	return languageRanks, err
+}
+
+func (conn *Database) GetDailyRankByDate(date string) (*models.Ranking, error)  {
+	sqlQuery := `select * from top_ten where time_stamp = $1`
+
+	rows, err := conn.Query(sqlQuery, date)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var timeStampN, n1langN, n2langN, n3langN, n4langN, n5langN, n6langN, n7langN, n8langN, n9langN, n10langN sql.NullString
+	var repoNumN, n1numN, n2numN, n3numN, n4numN, n5numN, n6numN, n7numN, n8numN, n9numN, n10numN sql.NullInt64
+
+	dailyRank := &models.Ranking{}
+
+	if rows.Next() {
+		err = rows.Scan(&repoNumN, &timeStampN, &n1langN, &n1numN, &n2langN, &n2numN, &n3langN, &n3numN, &n4langN, &n4numN ,&n5langN, &n5numN ,&n6langN, &n6numN ,&n7langN, &n7numN, &n8langN, &n8numN, &n9langN, &n9numN ,&n10langN, &n10numN )
+		if err != nil {
+			return nil, err
+		}
+
+		dailyRank.RepoNum = repoNumN.Int64
+		dailyRank.TimeStamp = timeStampN.String
+		dailyRank.N1lang = n1langN.String
+		dailyRank.N1num = n1numN.Int64
+		dailyRank.N2lang = n2langN.String
+		dailyRank.N2num = n2numN.Int64
+		dailyRank.N3lang = n3langN.String
+		dailyRank.N3num = n3numN.Int64
+		dailyRank.N4lang = n4langN.String
+		dailyRank.N4num = n4numN.Int64
+		dailyRank.N5lang = n5langN.String
+		dailyRank.N5num = n5numN.Int64
+		dailyRank.N6lang = n6langN.String
+		dailyRank.N6num = n6numN.Int64
+		dailyRank.N7lang = n7langN.String
+		dailyRank.N7num = n7numN.Int64
+		dailyRank.N8lang = n8langN.String
+		dailyRank.N8num = n8numN.Int64
+		dailyRank.N9lang = n9langN.String
+		dailyRank.N9num = n9numN.Int64
+		dailyRank.N10lang = n10langN.String
+		dailyRank.N10num = n10numN.Int64
+
+	}
+
+	return dailyRank, err
 }
