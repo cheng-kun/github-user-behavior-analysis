@@ -85,45 +85,45 @@ func (conn *Database) SaveTopTenRanking(ranking *models.Ranking) error {
 	return err
 }
 
-func (conn *Database) GetRankInfoByLanguage(lan string) ([]*models.LangaugeRank, error) {
-	sqlQuery := `select n1num as amount, time_stamp, 1 as rank from top_ten where lower(n1lang) = $1
+func (conn *Database) GetRankInfoByLanguage(lan, dateTime string) (*models.LangaugeRank, error) {
+	sqlQuery := `select n1num as amount, time_stamp, 1 as rank from top_ten where lower(n1lang) = $1 and time_stamp = $2
 union
-select n2num as amount, time_stamp, 2 as rank from top_ten where lower(n2lang) = $1
+select n2num as amount, time_stamp, 2 as rank from top_ten where lower(n2lang) = $1 and time_stamp = $2
 union
-select n3num as amount, time_stamp, 3 as rank from top_ten where lower(n3lang) = $1
+select n3num as amount, time_stamp, 3 as rank from top_ten where lower(n3lang) = $1 and time_stamp = $2
 union
-select n4num as amount, time_stamp, 4 as rank from top_ten where lower(n4lang) = $1
+select n4num as amount, time_stamp, 4 as rank from top_ten where lower(n4lang) = $1 and time_stamp = $2
 union
-select n5num as amount, time_stamp, 5 as rank from top_ten where lower(n5lang) = $1
+select n5num as amount, time_stamp, 5 as rank from top_ten where lower(n5lang) = $1 and time_stamp = $2
 union
-select n6num as amount, time_stamp, 6 as rank from top_ten where lower(n6lang) = $1
+select n6num as amount, time_stamp, 6 as rank from top_ten where lower(n6lang) = $1 and time_stamp = $2
 union
-select n7num as amount, time_stamp, 7 as rank from top_ten where lower(n7lang) = $1
+select n7num as amount, time_stamp, 7 as rank from top_ten where lower(n7lang) = $1 and time_stamp = $2
 union
-select n8num as amount, time_stamp, 8 as rank from top_ten where lower(n8lang) = $1
+select n8num as amount, time_stamp, 8 as rank from top_ten where lower(n8lang) = $1 and time_stamp = $2
 union
-select n9num as amount, time_stamp, 9 as rank from top_ten where lower(n9lang) = $1
+select n9num as amount, time_stamp, 9 as rank from top_ten where lower(n9lang) = $1 and time_stamp = $2
 union
-select n10num as amount, time_stamp, 10 as rank from top_ten where lower(n10lang) = $1
-order by time_stamp;`
+select n10num as amount, time_stamp, 10 as rank from top_ten where lower(n10lang) = $1 and time_stamp = $2
+`
 
 	lanLowerCase := strings.ToLower(strings.TrimSpace(lan))
 
-	rows, err := conn.Query(sqlQuery, lanLowerCase)
+	rows, err := conn.Query(sqlQuery, lanLowerCase, dateTime)
 	if err != nil {
 		logs.PrintLogger().Error(err)
 		return nil, err
 	}
 	defer rows.Close()
 
-	languageRanks := make([]*models.LangaugeRank,0)
+	//languageRanks := make([]*models.LangaugeRank,0)
+
+	languageRank := &models.LangaugeRank{}
 
 	var amountN, rankN sql.NullInt64
 	var timeStampN sql.NullString
 
 	for rows.Next() {
-
-		languageRank := &models.LangaugeRank{}
 
 		err = rows.Scan(&amountN, &timeStampN, &rankN )
 
@@ -131,10 +131,11 @@ order by time_stamp;`
 		languageRank.TimeStamp = timeStampN.String
 		languageRank.Rank = rankN.Int64
 
-		languageRanks = append(languageRanks, languageRank)
+		//languageRanks = append(languageRanks, languageRank)
 	}
 
-	return languageRanks, err
+	//return languageRanks, err
+	return languageRank, err
 }
 
 func (conn *Database) GetDailyRankByDate(date string) (*models.Ranking, error)  {

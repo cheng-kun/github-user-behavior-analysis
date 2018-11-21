@@ -9,11 +9,12 @@ import (
 
 func GetLanguageRankByLanguage(r *gin.Engine){
 
-	r.GET("/language/name/:name", func(c *gin.Context) {
+	r.GET("/language/nameandday/:name/:timeday", func(c *gin.Context) {
 
 		languageName := c.Param("name")
+		dateTime := c.Param("timeday")
 
-		ranks, err := db.ConnDB.GetRankInfoByLanguage(languageName)
+		ranks, err := db.ConnDB.GetRankInfoByLanguage(languageName,dateTime)
 
 		if err != nil {
 			logs.PrintLogger().Error(err)
