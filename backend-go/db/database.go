@@ -6,8 +6,8 @@ import (
 	"github.com/github-user-behavior-analysis/backend-go/conf"
 	"github.com/github-user-behavior-analysis/backend-go/logs"
 	"github.com/github-user-behavior-analysis/backend-go/models"
-	"strings"
 	_ "github.com/lib/pq"
+	"strings"
 )
 
 // Database connection to the github postgres database
@@ -48,11 +48,49 @@ func Connect(cfg conf.Config) (*Database, error) {
 	return &Database{DB: db}, nil
 }
 
+func (conn *Database) SaveTopUsers(userfollower *models.UserFollower) error {
+	sql := `INSERT INTO top_users( login_user, followers, rank) VALUES($1,$2,$3)`
+
+	_, err := conn.Exec(sql, userfollower.User, userfollower.Follower, userfollower.Rank)
+	if err == nil {
+		logs.PrintLogger().Infof("Successfully insert user_login name %s", userfollower.User)
+	}
+
+	return err
+}
+
+func (conn *Database) GetTopUsers(amount string) ([]*models.UserFollower, error) {
+	sql1 := `SELECT rank, login_user, followers FROM top_users Order by rank limit $1`
+
+	rows, err := conn.Query(sql1, amount)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	topUsers := make([]*models.UserFollower, 0)
+
+	var loginN sql.NullString
+	var followersN, rankN sql.NullInt64
+
+	for rows.Next() {
+
+		err = rows.Scan(&rankN, &loginN, &followersN)
+
+		topUser := &models.UserFollower{loginN.String, followersN.Int64, rankN.Int64}
+
+		topUsers = append(topUsers, topUser)
+	}
+
+	return topUsers, err
+
+
+}
+
+
 func (conn *Database) SaveTopTenRanking(ranking *models.Ranking) error {
 	sql := `INSERT INTO top_ten (repo_num, time_stamp, n1lang, n1num, n2lang, n2num, n3lang, n3num, n4lang, n4num, n5lang, n5num, n6lang, n6num, n7lang, n7num, n8lang, n8num, n9lang, n9num, n10lang, n10num)
 			VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22)`
-
-
 
 	_, err := conn.Exec(sql, ranking.RepoNum,
 		ranking.TimeStamp,

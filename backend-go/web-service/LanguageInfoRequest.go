@@ -43,5 +43,22 @@ func GetDailyRankByDate(r *gin.Engine){
 		c.JSON(http.StatusOK, ranks)
 
 	})
+}
+
+func GetTopUserByAmount(r *gin.Engine)  {
+	r.GET("/topuser/:amount", func(c *gin.Context) {
+		amount := c.Param("amount")
+
+		topUser, err := db.ConnDB.GetTopUsers(amount)
+		if err != nil {
+			logs.PrintLogger().Error(topUser)
+			c.String(http.StatusBadRequest, err.Error())
+		}
+
+		c.JSON(http.StatusOK, topUser)
+
+
+
+	})
 
 }

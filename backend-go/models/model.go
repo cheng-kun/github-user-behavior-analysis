@@ -50,4 +50,10 @@ type LangaugeRank struct {
 	Amount int64 `json:"amount"`
 	TimeStamp string `json:"time_stamp"`
 	Rank int64 `json:"rank"`
+}
+
+type UserFollower struct {
+	User string `json:"user"`
+	Follower int64 `json:"follower"`
+	Rank int64 `json:"rank"`
 } 

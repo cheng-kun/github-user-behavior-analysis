@@ -24,6 +24,8 @@ func StartWebRequest()  {
 
 	go GetDailyRankByDate(r)
 
+	go GetTopUserByAmount(r)
+
 	r.Run(":8080")
 
 }
