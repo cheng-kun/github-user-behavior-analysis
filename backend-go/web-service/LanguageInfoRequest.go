@@ -57,8 +57,21 @@ func GetTopUserByAmount(r *gin.Engine)  {
 
 		c.JSON(http.StatusOK, topUser)
 
+	})
+}
 
+func GetTopCountryByAmount(r *gin.Engine)  {
+	r.GET("/topcountry/:amount", func(c *gin.Context) {
+
+		amount := c.Param("amount")
+
+		topUser, err := db.ConnDB.GetCountryUser(amount)
+		if err != nil {
+			logs.PrintLogger().Error(topUser)
+			c.String(http.StatusBadRequest, err.Error())
+		}
+
+		c.JSON(http.StatusOK, topUser)
 
 	})
-
 }

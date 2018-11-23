@@ -31,19 +31,69 @@ func SaveTopUsers()  {
 		return
 	}
 
-	err = controller.SaveCSVData(file)
+	err = controller.SaveTopUser(file)
 	if err != nil {
 		logs.PrintLogger().Error(err)
 		return
 	}
 }
 
+func SaveCountryRepo()  {
+
+	file, err := controller.OpenCSVFile("./backend-go/data/country_reposamount.csv")
+	if err != nil {
+		logs.PrintLogger().Error(err)
+		return
+	}
+
+	err = controller.SaveCountryRepo(file)
+	if err != nil {
+		logs.PrintLogger().Error(err)
+		return
+	}
+}
+
+func SaveCountryUser()  {
+
+	file, err := controller.OpenCSVFile("./backend-go/data/country_useramount.csv")
+	if err != nil {
+		logs.PrintLogger().Error(err)
+		return
+	}
+
+	err = controller.SaveCountryUser(file)
+	if err != nil {
+		logs.PrintLogger().Error(err)
+		return
+	}
+}
+
+func SaveCountryPushs()  {
+
+	file, err := controller.OpenCSVFile("./backend-go/data/country_pushes_oct.csv")
+	if err != nil {
+		logs.PrintLogger().Error(err)
+		return
+	}
+
+	err = controller.SaveCountryPushs(file)
+	if err != nil {
+		logs.PrintLogger().Error(err)
+		return
+	}
+}
 
 func main()  {
 
 	//SaveTenTop("./data/github3.txt", *db)
 
 	//SaveTopUsers()
+
+	//SaveCountryRepo()
+
+	//SaveCountryUser()
+
+	//SaveCountryPushs()
 
 	web_service.StartWebRequest()
 

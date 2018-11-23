@@ -26,6 +26,8 @@ func StartWebRequest()  {
 
 	go GetTopUserByAmount(r)
 
+	go GetTopCountryByAmount(r)
+
 	r.Run(":8080")
 
 }

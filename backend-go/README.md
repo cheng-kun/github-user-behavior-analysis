@@ -62,6 +62,7 @@ RESPONSE:
     "n10num": 91
 }
 
+=============================
 2. Get Rank Info By Language Name
 
 HTTP GET
@@ -90,7 +91,7 @@ RESPONSE:
     }
 ]
 
-
+=============================
 3. Get Top User
 
 HTTP GET
@@ -110,8 +111,63 @@ EXAMPLE
 GET: 52.14.21.138:8080/topuser/3
 
 RESPONSE:
-[{"user":"4148","follower":164129,"rank":1},
-{"user":"cusspvz","follower":114438,"rank":2},
-{"user":"alex-cory","follower":85929,"rank":3}]
+[
+    {
+        "user": "4148",
+        "follower": 164129,
+        "rank": 1
+    },
+    {
+        "user": "cusspvz",
+        "follower": 114438,
+        "rank": 2
+    },
+    {
+        "user": "alex-cory",
+        "follower": 85929,
+        "rank": 3
+    }
+]
 
+=============================
+4.
+Get Top Country
 
+HTTP GET
+HOST:52.14.21.138:8080
+ENDPOINT: /topcountry/{:amount}
+
+RESPONSE: JSON
+
+type UserCountry struct {
+	Country string `json:"country"`
+	UserAmount int64 `json:"user_amount"`
+	RepoAmount int64 `json:"repo_amount"`
+	PushOct	int64 `json:"push_oct"`
+} 
+
+EXAMPLE
+
+GET: 52.14.21.138:8080/topcountry/3
+
+RESPONSE:
+[
+    {
+        "country": "us",
+        "user_amount": 183319,
+        "repo_amount": 827123,
+        "push_oct": 1045587
+    },
+    {
+        "country": "gb",
+        "user_amount": 33907,
+        "repo_amount": 155739,
+        "push_oct": 244199
+    },
+    {
+        "country": "cn",
+        "user_amount": 31793,
+        "repo_amount": 127811,
+        "push_oct": 149626
+    }
+]

@@ -223,3 +223,126 @@ func (conn *Database) GetDailyRankByDate(date string) (*models.Ranking, error)  
 
 	return dailyRank, err
 }
+
+func (conn *Database) SaveCountryRepos(country, repos string) error  {
+
+	selectQ := `select * from user_country where country = $1`
+	rows, err := conn.Query(selectQ, country)
+	if err != nil {
+		return err
+	}
+	defer rows.Close()
+
+	if rows.Next() {
+		updateQ := `update user_country SET repo_amount = $2 WHERE country = $1`
+
+		_, err = conn.Exec(updateQ, country, repos)
+		if err != nil {
+			logs.PrintLogger().Info(err)
+			return err
+		}
+
+	} else {
+		insertQ := `INSERT INTO user_country (country, repo_amount) VALUES($1, $2)`
+
+		_, err = conn.Exec(insertQ, country, repos)
+		if err != nil {
+			logs.PrintLogger().Info(err)
+			return err
+		}
+	}
+
+	return err
+}
+
+func (conn *Database) SaveCountryUsers(country, user string) error  {
+
+	selectQ := `select * from user_country where country = $1`
+	rows, err := conn.Query(selectQ, country)
+	if err != nil {
+		return err
+	}
+	defer rows.Close()
+
+	if rows.Next() {
+		updateQ := `update user_country SET user_amount = $2 WHERE country = $1`
+
+		_, err = conn.Exec(updateQ, country, user)
+		if err != nil {
+			logs.PrintLogger().Info(err)
+			return err
+		}
+
+	} else {
+		insertQ := `INSERT INTO user_country (country, user_amount) VALUES($1, $2)`
+
+		_, err = conn.Exec(insertQ, country, user)
+		if err != nil {
+			logs.PrintLogger().Info(err)
+			return err
+		}
+	}
+
+	return err
+}
+
+func (conn *Database) SaveCountryPushs(country, push string) error  {
+
+	selectQ := `select * from user_country where country = $1`
+	rows, err := conn.Query(selectQ, country)
+	if err != nil {
+		return err
+	}
+	defer rows.Close()
+
+	if rows.Next() {
+		updateQ := `update user_country SET push_amount = $2 WHERE country = $1`
+
+		_, err = conn.Exec(updateQ, country, push)
+		if err != nil {
+			logs.PrintLogger().Info(err)
+			return err
+		}
+
+	} else {
+		insertQ := `INSERT INTO user_country (country, push_amount) VALUES($1, $2)`
+
+		_, err = conn.Exec(insertQ, country, push)
+		if err != nil {
+			logs.PrintLogger().Info(err)
+			return err
+		}
+	}
+
+	return err
+}
+
+func (conn *Database) GetCountryUser(amount string) ([]*models.UserCountry, error) {
+	sql1 := `SELECT country, user_amount, repo_amount, push_amount FROM user_country Order by user_amount desc limit $1`
+
+	rows, err := conn.Query(sql1, amount)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	topUsers := make([]*models.UserCountry, 0)
+
+	var countryN sql.NullString
+	var userN, repoN, pushN sql.NullInt64
+
+	for rows.Next() {
+
+		err = rows.Scan(&countryN, &userN, &repoN, &pushN)
+
+		topUser := &models.UserCountry{countryN.String, userN.Int64, repoN.Int64, pushN.Int64}
+
+		logs.PrintLogger().Info(topUser)
+
+		topUsers = append(topUsers, topUser)
+	}
+
+	return topUsers, err
+
+
+}

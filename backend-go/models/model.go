@@ -56,4 +56,11 @@ type UserFollower struct {
 	User string `json:"user"`
 	Follower int64 `json:"follower"`
 	Rank int64 `json:"rank"`
+}
+
+type UserCountry struct {
+	Country string `json:"country"`
+	UserAmount int64 `json:"user_amount"`
+	RepoAmount int64 `json:"repo_amount"`
+	PushOct	int64 `json:"push_oct"`
 } 
