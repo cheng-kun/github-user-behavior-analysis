@@ -62,5 +62,5 @@ type UserCountry struct {
 	Country string `json:"country"`
 	UserAmount int64 `json:"user_amount"`
 	RepoAmount int64 `json:"repo_amount"`
-	PushOct	int64 `json:"push_oct"`
+	PushAmount	int64 `json:"push_amount"`
 } 
