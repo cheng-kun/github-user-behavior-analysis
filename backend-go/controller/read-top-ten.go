@@ -2,9 +2,9 @@ package controller
 
 import (
 	"encoding/json"
-	"github.com/github-user-behavior-analysis/db"
-	"github.com/github-user-behavior-analysis/logs"
-	"github.com/github-user-behavior-analysis/models"
+	"github.com/github-user-behavior-analysis/backend-go/db"
+	"github.com/github-user-behavior-analysis/backend-go/logs"
+	"github.com/github-user-behavior-analysis/backend-go/models"
 	"io/ioutil"
 	"os"
 )

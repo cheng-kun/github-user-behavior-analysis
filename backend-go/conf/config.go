@@ -2,7 +2,7 @@ package conf
 
 import (
 	"github.com/BurntSushi/toml"
-	"github.com/github-user-behavior-analysis/logs"
+	"github.com/github-user-behavior-analysis/backend-go/logs"
 )
 
 type Config struct {

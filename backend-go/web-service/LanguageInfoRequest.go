@@ -2,8 +2,8 @@ package web_service
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/github-user-behavior-analysis/db"
-	"github.com/github-user-behavior-analysis/logs"
+	"github.com/github-user-behavior-analysis/backend-go/db"
+	"github.com/github-user-behavior-analysis/backend-go/logs"
 	"net/http"
 )
 

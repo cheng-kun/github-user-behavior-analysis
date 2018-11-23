@@ -3,9 +3,9 @@ package db
 import (
 	"database/sql"
 	"fmt"
-	"github.com/github-user-behavior-analysis/conf"
-	"github.com/github-user-behavior-analysis/logs"
-	"github.com/github-user-behavior-analysis/models"
+	"github.com/github-user-behavior-analysis/backend-go/conf"
+	"github.com/github-user-behavior-analysis/backend-go/logs"
+	"github.com/github-user-behavior-analysis/backend-go/models"
 	"strings"
 	_ "github.com/lib/pq"
 )

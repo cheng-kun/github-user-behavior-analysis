@@ -1,9 +1,9 @@
-package backend_go
+package main
 
 import (
-	"github.com/github-user-behavior-analysis/controller"
-	"github.com/github-user-behavior-analysis/db"
-	"github.com/github-user-behavior-analysis/web-service"
+	"github.com/github-user-behavior-analysis/backend-go/controller"
+	"github.com/github-user-behavior-analysis/backend-go/db"
+	"github.com/github-user-behavior-analysis/backend-go/web-service"
 )
 
 
