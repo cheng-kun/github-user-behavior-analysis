@@ -21,7 +21,7 @@ func init()  {
 
 	logs.PrintLogger().Info("initilizing database connection ... ")
 
-	cfg, err := conf.LoadConfigFile("./backend-go/conf/config.toml")
+	cfg, err := conf.LoadConfigFile("./config.toml")
 	if err != nil {
 		logs.PrintLogger().Error(err)
 		return
