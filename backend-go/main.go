@@ -1,4 +1,4 @@
-package main
+package backend_go
 
 import (
 	"github.com/github-user-behavior-analysis/controller"
