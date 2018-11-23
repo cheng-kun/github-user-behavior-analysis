@@ -1,4 +1,4 @@
-Get Daily Rank By Date
+1. Get Daily Rank By Date
 
 HTTP GET
 HOST:52.14.21.138:8080
@@ -62,18 +62,13 @@ RESPONSE:
     "n10num": 91
 }
 
-
-Get Rank Info By Language Name
+2. Get Rank Info By Language Name
 
 HTTP GET
 HOST:52.14.21.138:8080
 ENDPOINT:/language/nameandday/{:name}/{:datetime}
 
 RESPONSE: JSON
-
-type RankingsJSON struct {
-	Rankings []Ranking `json:"rankings"`
-}
 
 type LangaugeRank struct {
 	Amount int64 `json:"amount"`
@@ -94,3 +89,29 @@ RESPONSE:
         "rank": 10
     }
 ]
+
+
+3. Get Top User
+
+HTTP GET
+HOST:52.14.21.138:8080
+ENDPOINT: /topuser/{:amount}
+
+RESPONSE: JSON
+
+type UserFollower struct {
+	User string `json:"user"`
+	Follower int64 `json:"follower"`
+	Rank int64 `json:"rank"`
+} 
+
+EXAMPLE
+
+GET: 52.14.21.138:8080/topuser/3
+
+RESPONSE:
+[{"user":"4148","follower":164129,"rank":1},
+{"user":"cusspvz","follower":114438,"rank":2},
+{"user":"alex-cory","follower":85929,"rank":3}]
+
+
