@@ -21,10 +21,10 @@ func PrintLogger() *log.Logger  {
 
 	Log.SetReportCaller(true)
 	pathMap := lfshook.PathMap{
-		log.InfoLevel : "./logs/info.log",
-		log.DebugLevel : "./logs/debug.log",
-		log.ErrorLevel : "./logs/error.log",
-		log.FatalLevel : "./logs/fatal.log",
+		log.InfoLevel : "./backend-go/logs/info.log",
+		log.DebugLevel : "./backend-go/logs/debug.log",
+		log.ErrorLevel : "./backend-go/logs/error.log",
+		log.FatalLevel : "./backend-go/logs/fatal.log",
 	}
 
 	Log.Hooks.Add(lfshook.NewHook(
