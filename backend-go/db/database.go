@@ -8,9 +8,10 @@ import (
 	"github.com/github-user-behavior-analysis/backend-go/models"
 	_ "github.com/lib/pq"
 	"strings"
+	"time"
 )
 
-// Database connection to the github postgres database
+// Database connection to the github postgres ConnDatabase
 type Database struct {
 	*sql.DB
 }
@@ -19,7 +20,7 @@ var ConnDB *Database
 
 func init()  {
 
-	logs.PrintLogger().Info("initilizing database connection ... ")
+	logs.PrintLogger().Info("initilizing ConnDatabase connection ... ")
 
 	cfg, err := conf.LoadConfigFile("./config.toml")
 	if err != nil {
@@ -33,10 +34,10 @@ func init()  {
 		return
 	}
 
-	logs.PrintLogger().Info("Setup database connection sucessfully! ")
+	logs.PrintLogger().Info("Setup ConnDatabase connection sucessfully! ")
 }
 
-// Connect to the database
+// Connect to the ConnDatabase
 func Connect(cfg conf.Config) (*Database, error) {
 	connStr := fmt.Sprintf("user='%s' password='%s' dbname='%s' host='%s' sslmode=disable",
 		cfg.Database.Username, cfg.Database.Password, cfg.Database.DBName, cfg.Database.Host)
@@ -174,6 +175,53 @@ select n10num as amount, time_stamp, 10 as rank from top_ten where lower(n10lang
 
 	//return languageRanks, err
 	return languageRank, err
+}
+
+func (conn *Database) GetAllDailyRanking() ([]*models.Ranking, error)  {
+	sqlQuery := `select * from top_ten `
+	rows, err := conn.Query(sqlQuery)
+	if err != nil {
+		return nil, err
+	}
+
+	rankings := make([]*models.Ranking, 0)
+
+	for rows.Next() {
+		ranking := &models.Ranking{}
+		var repoN, n1numN, n2numN, n3numN, n4numN, n5numN, n6numN, n7numN, n8numN, n9numN, n10numN sql.NullInt64
+		var n1langN, n2langN, n3langN, n4langN, n5langN, n6langN, n7langN, n8langN, n9langN, n10langN sql.NullString
+		var timeStamp time.Time
+
+		rows.Scan(&repoN,&timeStamp,&n1langN,&n1numN,&n2langN,&n2numN,&n3langN,&n3numN,&n4langN,&n4numN,&n5langN,&n5numN,&n6langN,&n6numN,&n7langN,&n7numN,&n8langN,&n8numN,&n9langN, &n9numN,&n10langN,&n1numN)
+
+			ranking.RepoNum =repoN.Int64
+			ranking.TimeStamp = timeStamp.String()
+			ranking.N1lang = n1langN.String
+			ranking.N1num = n1numN.Int64
+			ranking.N2lang = n2langN.String
+			ranking.N2num = n2numN.Int64
+			ranking.N3lang = n3langN.String
+			ranking.N3num = n3numN.Int64
+			ranking.N4lang = n4langN.String
+			ranking.N4num = n4numN.Int64
+			ranking.N5lang = n5langN.String
+			ranking.N5num = n5numN.Int64
+			ranking.N6lang = n6langN.String
+			ranking.N6num = n6numN.Int64
+			ranking.N7lang = n7langN.String
+			ranking.N7num = n7numN.Int64
+			ranking.N8lang = n8langN.String
+			ranking.N8num = n8numN.Int64
+			ranking.N9lang = n9langN.String
+			ranking.N9num = n9numN.Int64
+			ranking.N10lang = n10langN.String
+			ranking.N10num = n10numN.Int64
+
+		rankings = append(rankings, ranking)
+	}
+
+	return rankings, err
+
 }
 
 func (conn *Database) GetDailyRankByDate(date string) (*models.Ranking, error)  {
@@ -343,6 +391,5 @@ func (conn *Database) GetCountryUser(amount string) ([]*models.UserCountry, erro
 	}
 
 	return topUsers, err
-
-
 }
+

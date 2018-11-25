@@ -4,7 +4,6 @@ import (
 	"github.com/github-user-behavior-analysis/backend-go/controller"
 	"github.com/github-user-behavior-analysis/backend-go/db"
 	"github.com/github-user-behavior-analysis/backend-go/logs"
-	"github.com/github-user-behavior-analysis/backend-go/web-service"
 )
 
 
@@ -95,6 +94,50 @@ func main()  {
 
 	//SaveCountryPushs()
 
-	web_service.StartWebRequest()
+	//web_service.StartWebRequest()
+
+	//client, e := db.SetupMongoDB()
+	//fmt.Println(client)
+	//fmt.Println(e)
+	//
+	//collection := client.Database("demoDB").Collection("demoDB")
+	//
+	//cur, err := collection.Find(context.Background(), nil)
+	//if err != nil { log.Fatal(err) }
+	//defer cur.Close(context.Background())
+	//for cur.Next(context.Background()) {
+	//	//elem := &interface{}
+	//	//err := cur.Decode(elem)
+	//	//if err != nil { log.Fatal(err) }
+	//	//// do something with elem....
+	//}
+	//if err := cur.Err(); err != nil {
+	//	log.Fatal(err)
+	//}
+
+	//db.InsertMongoDB()
+
+	//all := db.FindAll()
+	//
+	//logs.PrintLogger().Info(all)
+
+	//rankings, err := db.ConnDB.GetAllDailyRanking()
+	//logs.PrintLogger().Error(err)
+	//logs.PrintLogger().Info(len(rankings))
+
+	lang := db.LanguageDAO{}
+	lang.Server = "localhost:27017"
+	lang.Database = "demoDB"
+
+	lang.Connect()
+
+	rankings, _ := db.ConnDB.GetAllDailyRanking()
+
+	for _, rank :=range rankings {
+		logs.PrintLogger().Info(rank)
+		lang.Insert(rank)
+	}
+
+
 
 }

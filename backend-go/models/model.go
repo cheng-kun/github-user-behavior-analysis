@@ -42,6 +42,8 @@ type Ranking struct {
 	N10num int64	`json:"n10num"`
 }
 
+
+
 type RankingsJSON struct {
 	Rankings []Ranking `json:"rankings"`
 }
