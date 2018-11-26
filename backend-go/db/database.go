@@ -177,6 +177,18 @@ select n10num as amount, time_stamp, 10 as rank from top_ten where lower(n10lang
 	return languageRank, err
 }
 
+func (conn *Database) SaveProjectLanguage(timeStamp string, language string, amount string) error {
+	sqlQuery := `INSERT INTO project_language (time_stamp, language, amount) VALUES ($1, $2, $3)`
+
+	_, err := conn.Exec(sqlQuery, timeStamp, language, amount)
+	if err != nil {
+		logs.PrintLogger().Error(err)
+		return err
+	}
+
+	return err
+}
+
 func (conn *Database) GetAllDailyRanking() ([]*models.Ranking, error)  {
 	sqlQuery := `select * from top_ten `
 	rows, err := conn.Query(sqlQuery)

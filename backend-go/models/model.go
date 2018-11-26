@@ -42,6 +42,11 @@ type Ranking struct {
 	N10num int64	`json:"n10num"`
 }
 
+type ProjectLanguage struct {
+	TimeStamp time.Time `json:"time_stamp"`
+	Langauge string `json:"langauge"`
+	Amount int	`json:"amount"`
+}
 
 
 type RankingsJSON struct {

@@ -91,3 +91,20 @@ func SaveCountryPushs(file *os.File) error  {
 
 	return err
 }
+
+func SaveProjectLanguage(file *os.File) error  {
+	lines, err := csv.NewReader(file).ReadAll()
+	if err != nil {
+		return err
+	}
+
+	for _, line := range lines {
+		timeStamp := line[0]
+		languageName := line[1]
+		amount := line[2]
+
+		db.ConnDB.SaveProjectLanguage(timeStamp, languageName, amount)
+	}
+
+	return  err
+}

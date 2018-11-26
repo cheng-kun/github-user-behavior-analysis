@@ -82,6 +82,20 @@ func SaveCountryPushs()  {
 	}
 }
 
+func SaveProjectLanguage()  {
+	file, err := controller.OpenCSVFile("./backend-go/data/language.csv")
+	if err != nil {
+		logs.PrintLogger().Error(err)
+		return
+	}
+
+	err = controller.SaveProjectLanguage(file)
+	if err != nil {
+		logs.PrintLogger().Error(err)
+		return
+	}
+}
+
 func WriteMangoDB()  {
 	lang := db.LanguageDAO{}
 	lang.Server = "localhost:27017"
@@ -110,7 +124,9 @@ func main()  {
 
 	//SaveCountryPushs()
 
+	SaveProjectLanguage()
+
 	//web_service.StartWebRequest()
 
-	WriteMangoDB()
+	//WriteMangoDB()
 }

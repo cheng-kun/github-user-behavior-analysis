@@ -1,0 +1,9 @@
+[Database]
+host = "githubdbinstance.cy7n8kyw40k7.us-east-2.rds.amazonaws.com"
+username = "githubdbinstance"
+password = "password"
+dbname = "githubdbinstance"
+
+[[githubcredentials]]
+account = "CHENG-KUN"
+token = "33e20b9a3b72b5f54a78cb40d6c8414ee5d01632"
