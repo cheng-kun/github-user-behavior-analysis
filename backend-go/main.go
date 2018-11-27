@@ -24,7 +24,7 @@ func SaveTenTop(filename string, conn db.Database)  {
 }
 
 func SaveTopUsers()  {
-	file, err := controller.OpenCSVFile("./backend-go/data/top_100_users.csv")
+	file, err := controller.OpenCSVFile("./backend-go/data/top_100_user.csv")
 	if err != nil {
 		logs.PrintLogger().Error(err)
 		return
@@ -116,7 +116,7 @@ func main()  {
 
 	//SaveTenTop("./data/github3.txt", *db)
 
-	//SaveTopUsers()
+	SaveTopUsers()
 
 	//SaveCountryRepo()
 
@@ -124,7 +124,7 @@ func main()  {
 
 	//SaveCountryPushs()
 
-	SaveProjectLanguage()
+	//SaveProjectLanguage()
 
 	//web_service.StartWebRequest()
 
