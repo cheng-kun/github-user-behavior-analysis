@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+  <title>Github User Behavior Analysis</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/templatemo_main.css">
+</head>
+
+<body>
+  <div class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+      <div class="logo">
+        <h1>Github User Behavior Analysis</h1>
+      </div>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+  </div>
+  <div class="template-page-wrapper">
+    <div class="navbar-collapse collapse templatemo-sidebar">
+      <ul class="templatemo-sidebar-menu">
+        <li>
+          <form class="navbar-form">
+            <input type="text" class="form-control" id="templatemo_search_box" placeholder="Users Search...">
+            <span class="btn btn-default" >Go</span>
+          </form>
+        </li>
+        <li class="active"><a href="#"><i class="fa fa-home"></i>Dashboard</a></li>
+
+        <li><a href="data.html"><i class="fa fa-cubes"></i>Data Visualization</a></li>
+        <li><a href="user.html"><i class="fa fa-users"></i>Manage Users</a></li>
+      </ul>
+    </div>
+    <!--/.navbar-collapse -->
+
+    <div class="templatemo-content-wrapper">
+      <div class="templatemo-content">
+        <div class="templatemo-panels">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="panel panel-success">
+                <div class="panel-heading">Churn of Language</div>
+                <canvas id="templatemo-bar-chart"></canvas>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="panel panel-success">
+                <div class="panel-heading">Churn of Language</div>
+                <canvas id="templatemo-line-chart"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-sm-6 margin-bottom-30">
+              <div class="panel panel-primary">
+                <div class="panel-heading">Projects</div>
+                <div class="panel-body">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Language</th>
+                        <th>Stars</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>John</td>
+                        <td>Java</td>
+                        <td>5000</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Bill</td>
+                        <td>C++</td>
+                        <td>3000</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Marry</td>
+                        <td>Python</td>
+                        <td>2000</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Marry</td>
+                        <td>Scale</td>
+                        <td>1000</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Marreey</td>
+                        <td>VB</td>
+                        <td>800</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 margin-bottom-30">
+              <div class="panel panel-primary">
+                <div class="panel-heading">Users</div>
+                <div class="panel-body">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th>Stars</th>
+                        <th>Trend</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <script>
+                        for (var i = 0; i < 5; i++) {
+                          document.write("<tr>\
+                              <td id="+ i + ">" + i + "</td>\
+                              <td>John</td>\
+                              <td id="+ i + "country></td>\
+                              <td>5000</td>\
+                              <td>Hot</td>");
+                        }
+                      </script>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                    class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Are you sure you want to sign out?</h4>
+              </div>
+              <div class="modal-footer">
+                <a href="sign-in.html" class="btn btn-primary">Yes</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/Chart.min.js"></script>
+      <script src="js/templatemo_script.js"></script>
+      <script type="text/javascript">
+        // Line chart
+        var randomScalingFactor = function () { return Math.round(Math.random() * 100) };
+        var lineChartData = {
+          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          datasets: [
+            {
+              label: 'JAVA',
+              fillColor: "rgba(255,106,106,0.2)",
+              strokeColor: "rgba(255,106,106,1)",
+              pointColor: "rgba(255,106,106,1)",
+              pointStrokeColor: "#fff",
+              pointHighlightFill: "#fff",
+              pointHighlightStroke: "rgba(255,106,106,1)",
+              data: [200, 50, randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+            },
+            {
+              label: "C++",
+              fillColor: "rgba(151,187,205,0.2)",
+              strokeColor: "rgba(151,187,205,1)",
+              pointColor: "rgba(151,187,205,1)",
+              pointStrokeColor: "#fff",
+              pointHighlightFill: "#fff",
+              pointHighlightStroke: "rgba(151,187,205,1)",
+              data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+            },
+            {
+              label: "Python",
+              fillColor: "rgba(64,224,208,0.2)",
+              strokeColor: "rgba(64,224,208,1)",
+              pointColor: "rgba(64,224,208,1)",
+              pointStrokeColor: "#fff",
+              pointHighlightFill: "#fff",
+              pointHighlightStroke: "rgba(64,224,208,1)",
+              data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+            }
+          ]
+
+        }
+        var ChartData = {
+          labels: ["JAVA", "C++", "Python", "Scale", "VB"],
+          datasets: [
+            {
+              label: "C++",
+              fillColor: "rgba(151,187,205,0.2)",
+              strokeColor: "rgba(151,187,205,1)",
+              pointColor: "rgba(151,187,205,1)",
+              pointStrokeColor: "#fff",
+              pointHighlightFill: "#fff",
+              pointHighlightStroke: "rgba(151,187,205,1)",
+              data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+            }
+          ]
+
+        }
+
+        window.onload = function () {
+          var ctx_line = document.getElementById("templatemo-line-chart").getContext("2d");
+          var ctx_bar = document.getElementById("templatemo-bar-chart").getContext("2d");
+
+          window.myLine = new Chart(ctx_line).Line(lineChartData, {
+            responsive: true
+          });
+          $.get("http://www.tutorialspoint.com/json/data.json", function (data) {
+            ChartData.labels[3] = data.country;
+            ChartData.datasets[0].data[3] = 11;
+            window.myBar = new Chart(ctx_bar).Bar(ChartData, {
+              responsive: true
+            });
+          });
+
+          //window.myBar = new Chart(ctx_bar).Bar(ChartData, {
+          //  responsive: true
+          //});
+
+        };
+
+        $(document).ready(function () {
+          // json 这里就能直接获得了，不需要再var等于了
+          $.get("http://www.tutorialspoint.com/json/data.json", function (data) {
+            for (var i = 0; i < 5; i++) {
+              document.getElementById(i + "country").innerHTML = data.country;
+            }
+          });
+        });
+
+        function search_user (){
+          var name = document.getElementById("templatemo_search_box").value;
+          localStorage.setItem("User",name);
+          window.location.href='user.html';
+        }
+
+        $('#myTab a').click(function (e) {
+          e.preventDefault();
+          $(this).tab('show');
+        });
+
+        $('#loading-example-btn').click(function () {
+          var btn = $(this);
+          btn.button('loading');
+          // $.ajax(...).always(function () {
+          //   btn.button('reset');
+          // });
+        });
+      </script>
+</body>
+
+</html>
