@@ -1,0 +1,1261 @@
+ * Serving Flask app "predAPI" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+/home/ubuntu/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+ * Running on http://172.31.31.247:2222/ (Press CTRL+C to quit)
+ * Serving Flask app "predAPI" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+/home/ubuntu/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+ * Running on http://172.31.31.247:2222/ (Press CTRL+C to quit)
+2018-11-27 04:02:08.782238: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+/home/ubuntu/anaconda3/lib/python3.6/site-packages/sklearn/utils/validation.py:475: DataConversionWarning: Data with input dtype object was converted to float64 by MinMaxScaler.
+  warnings.warn(msg, DataConversionWarning)
+65.38.73.195 - - [27/Nov/2018 04:02:10] "[37mGET /api/pred/days/total/?days=7 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:02:19] "[37mGET /api/monthavg/?timestamp=20181201 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:02:23] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:04:49] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:05:25] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:06:42] "[37mGET /api/monthavg/?timestamp=20180101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:07:01] "[37mGET /api/monthavg/?timestamp=20180101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:07:25] "[37mGET /api/monthavg/?timestamp=20180101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:07:53] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:04] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:04] "[37mGET /api/monthavg/?timestamp=20180501 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:04] "[37mGET /api/monthavg/?timestamp=20180701 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:04] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:04] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:04] "[37mGET /api/monthavg/?timestamp=20180601 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:04] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:04] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:05] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:22] "[37mGET /api/monthavg/?timestamp=20180501 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:22] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:22] "[37mGET /api/monthavg/?timestamp=20180601 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:22] "[37mGET /api/monthavg/?timestamp=20180701 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:22] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:22] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:22] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:22] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:08:23] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:15] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:15] "[37mGET /api/monthavg/?timestamp=20180601 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:15] "[37mGET /api/monthavg/?timestamp=20180501 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:15] "[37mGET /api/monthavg/?timestamp=20180701 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:15] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:15] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:15] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:15] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:17] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:47] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:47] "[37mGET /api/monthavg/?timestamp=20180601 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:47] "[37mGET /api/monthavg/?timestamp=20180501 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:47] "[37mGET /api/monthavg/?timestamp=20180701 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:47] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:47] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:47] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:47] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:09:48] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:10:48] "[37mGET /api/monthavg/?timestamp=20180601 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:10:48] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:10:48] "[37mGET /api/monthavg/?timestamp=20180501 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:10:48] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:10:48] "[37mGET /api/monthavg/?timestamp=20180701 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:10:48] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:10:48] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:10:48] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:10:50] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:22] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:22] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:22] "[37mGET /api/monthavg/?timestamp=20180701 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:22] "[37mGET /api/monthavg/?timestamp=20180501 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:22] "[37mGET /api/monthavg/?timestamp=20180601 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:22] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:22] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:22] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:23] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:38] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:38] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:38] "[37mGET /api/monthavg/?timestamp=20180601 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:38] "[37mGET /api/monthavg/?timestamp=20180701 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:38] "[37mGET /api/monthavg/?timestamp=20180501 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:38] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:38] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:38] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:11:39] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:12:30] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:12:30] "[37mGET /api/monthavg/?timestamp=20180501 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:12:30] "[37mGET /api/monthavg/?timestamp=20180601 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:12:30] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:12:30] "[37mGET /api/monthavg/?timestamp=20180701 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:12:30] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:12:30] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:12:30] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:12:31] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:13:18] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:13:18] "[37mGET /api/monthavg/?timestamp=20180501 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:13:18] "[37mGET /api/monthavg/?timestamp=20180601 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:13:18] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:13:18] "[37mGET /api/monthavg/?timestamp=20180701 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:13:19] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:13:19] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:13:19] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:13:20] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:14:18] "[37mGET /api/monthavg/?timestamp=20180501 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:14:18] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:14:18] "[37mGET /api/monthavg/?timestamp=20180601 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:14:18] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:14:18] "[37mGET /api/monthavg/?timestamp=20180701 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:14:18] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:14:18] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:14:18] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:14:19] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:16:35] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:16:35] "[37mGET /api/monthavg/?timestamp=20180501 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:16:35] "[37mGET /api/monthavg/?timestamp=20180601 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:16:35] "[37mGET /api/monthavg/?timestamp=20180701 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:16:35] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:16:36] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:16:36] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:16:36] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:16:37] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:19:14] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:19:15] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:20:15] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:20:17] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:20:35] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:20:37] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:20:49] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:20:51] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:21:10] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:21:12] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:22:47] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:22:49] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:23:44] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:23:46] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:25:33] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:25:34] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:26:06] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:26:08] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:26:19] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:26:20] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:27:57] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:27:57] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:27:57] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:27:57] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:27:57] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:27:57] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:27:58] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:28:11] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:28:11] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:28:11] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:28:11] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:28:11] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:28:11] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:28:12] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:28:31] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:28:33] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:29:47] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:29:47] "[37mGET /api/monthavg/?timestamp=20180501 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:29:49] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:30:12] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:30:12] "[37mGET /api/monthavg/?timestamp=20180501 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:30:13] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:30:48] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:30:49] "[37mGET /api/monthavg/?timestamp=20180501 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:30:50] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:31:42] "[37mGET /api/monthavg/?timestamp=20180401 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:31:42] "[37mGET /api/monthavg/?timestamp=20180501 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:31:42] "[37mGET /api/monthavg/?timestamp=20180601 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:31:43] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:33:58] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:33:58] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:33:59] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:33:59] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:34:00] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:34:12] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:34:47] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:34:49] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:34:49] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:34:49] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:34:49] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:34:51] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:35:24] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:36:11] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:36:11] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:36:11] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:36:11] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:36:12] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:36:50] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:36:51] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:36:51] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:36:51] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:36:52] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:36:57] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:36:57] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:36:57] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:36:57] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:37:01] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:37:01] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:37:01] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:37:01] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:37:52] "[37mGET /api/pred/months/?months=3&language=Python HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:41:21] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:41:21] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:41:21] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:41:21] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/saving.py:327: UserWarning: Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+  warnings.warn('Error in loading the saved optimizer '
+[2018-11-27 04:41:23,121] ERROR in app: Exception on /api/pred/days/total/ [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "predAPI.py", line 87, in pred_Total
+    total = predTotal(int(args))
+  File "/home/ubuntu/predictTrend/Statistic-Lang/trendModel/predService.py", line 198, in predTotal
+    pre=model.predict(dataSequence)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/training.py", line 1169, in predict
+    steps=steps)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/training_arrays.py", line 294, in predict_loop
+    batch_outs = f(ins_batch)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 2697, in __call__
+    if hasattr(get_session(), '_make_callable_from_options'):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 199, in get_session
+    [tf.is_variable_initialized(v) for v in candidate_vars])
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1137, in _run
+    self._graph, fetches, feed_dict_tensor, feed_handles=feed_handles)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 484, in __init__
+    self._assert_fetchable(graph, fetch.op)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 497, in _assert_fetchable
+    'Operation %r has been marked as not fetchable.' % op.name)
+ValueError: Operation 'IsVariableInitialized_10' has been marked as not fetchable.
+[2018-11-27 04:41:23,128] ERROR in app: Exception on /api/pred/months/ [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 2323, in get_attr
+    c_api.TF_OperationGetAttrValueProto(self._c_op, name, buf)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Operation 'lstm_1/while/add_7' has no attr named '_XlaCompile'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py", line 403, in _MaybeCompile
+    xla_compile = op.get_attr("_XlaCompile")
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 2327, in get_attr
+    raise ValueError(str(e))
+ValueError: Operation 'lstm_1/while/add_7' has no attr named '_XlaCompile'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "predAPI.py", line 65, in getPredMonth
+    pred = predMonth(args_month, args_lang, 12)
+  File "/home/ubuntu/predictTrend/Statistic-Lang/monthModel/predService.py", line 63, in predMonth
+    model = load_model(path + '/models/%smodel_avg.h5' % lang)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/saving.py", line 419, in load_model
+    model = _deserialize_model(f, custom_objects, compile)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/saving.py", line 317, in _deserialize_model
+    model._make_train_function()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/training.py", line 509, in _make_train_function
+    loss=self.total_loss)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/legacy/interfaces.py", line 91, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/optimizers.py", line 475, in get_updates
+    grads = self.get_gradients(loss, params)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/optimizers.py", line 89, in get_gradients
+    grads = K.gradients(loss, params)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 2757, in gradients
+    return tf.gradients(loss, variables, colocate_gradients_with_ops=True)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py", line 630, in gradients
+    gate_gradients, aggregation_method, stop_gradients)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py", line 814, in _GradientsHelper
+    lambda: grad_fn(op, *out_grads))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py", line 408, in _MaybeCompile
+    return grad_fn()  # Exit early
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py", line 814, in <lambda>
+    lambda: grad_fn(op, *out_grads))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py", line 908, in _AddGrad
+    rx, ry = gen_array_ops.broadcast_gradient_args(sx, sy)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/gen_array_ops.py", line 676, in broadcast_gradient_args
+    "BroadcastGradientArgs", s0=s0, s1=s1, name=name)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py", line 787, in _apply_op_helper
+    op_def=op_def)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py", line 488, in new_func
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3274, in create_op
+    op_def=op_def)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 1807, in __init__
+    self._control_flow_post_processing()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 1816, in _control_flow_post_processing
+    control_flow_util.CheckInputFromValidContext(self, input_tensor.op)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/control_flow_util.py", line 322, in CheckInputFromValidContext
+    raise ValueError(error_msg + " See info log for more details.")
+ValueError: Cannot use 'training/Adam/gradients/lstm_1/while/add_7_grad/Shape' as input to 'training/Adam/gradients/lstm_1/while/add_7_grad/BroadcastGradientArgs' because 'training/Adam/gradients/lstm_1/while/add_7_grad/Shape' is in a while loop. See info log for more details.
+135.0.239.119 - - [27/Nov/2018 04:41:23] "[1m[35mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 500 -
+135.0.239.119 - - [27/Nov/2018 04:41:23] "[1m[35mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 500 -
+135.0.239.119 - - [27/Nov/2018 04:41:40] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:41:52] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:41:56] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:41:56] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:41:57] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:41:57] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+[2018-11-27 04:42:00,053] ERROR in app: Exception on /api/pred/days/total/ [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "predAPI.py", line 87, in pred_Total
+    total = predTotal(int(args))
+  File "/home/ubuntu/predictTrend/Statistic-Lang/trendModel/predService.py", line 198, in predTotal
+    pre=model.predict(dataSequence)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/training.py", line 1169, in predict
+    steps=steps)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/training_arrays.py", line 294, in predict_loop
+    batch_outs = f(ins_batch)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 2715, in __call__
+    return self._call(inputs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 2671, in _call
+    session)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 2623, in _make_callable
+    callable_fn = session._make_callable_from_options(callable_opts)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1471, in _make_callable_from_options
+    return BaseSession._Callable(self, callable_options)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1425, in __init__
+    session._session, options_ptr, status)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/errors_impl.py", line 528, in __exit__
+    c_api.TF_GetCode(self.status.status))
+tensorflow.python.framework.errors_impl.NotFoundError: PruneForTargets: Some target nodes not found: group_deps 
+135.0.239.119 - - [27/Nov/2018 04:42:00] "[1m[35mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 500 -
+135.0.239.119 - - [27/Nov/2018 04:42:00] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:42:31] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:42:31] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:42:31] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:42:31] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+[2018-11-27 04:42:33,315] ERROR in app: Exception on /api/pred/days/total/ [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "predAPI.py", line 87, in pred_Total
+    total = predTotal(int(args))
+  File "/home/ubuntu/predictTrend/Statistic-Lang/trendModel/predService.py", line 198, in predTotal
+    pre=model.predict(dataSequence)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/training.py", line 1169, in predict
+    steps=steps)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/training_arrays.py", line 294, in predict_loop
+    batch_outs = f(ins_batch)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 2697, in __call__
+    if hasattr(get_session(), '_make_callable_from_options'):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 199, in get_session
+    [tf.is_variable_initialized(v) for v in candidate_vars])
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1137, in _run
+    self._graph, fetches, feed_dict_tensor, feed_handles=feed_handles)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 484, in __init__
+    self._assert_fetchable(graph, fetch.op)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 497, in _assert_fetchable
+    'Operation %r has been marked as not fetchable.' % op.name)
+ValueError: Operation 'IsVariableInitialized_14' has been marked as not fetchable.
+135.0.239.119 - - [27/Nov/2018 04:42:33] "[1m[35mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 500 -
+135.0.239.119 - - [27/Nov/2018 04:42:33] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:43:25] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:43:25] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:43:25] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:43:26] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:43:27] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:43:57] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:43:57] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:43:57] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:43:57] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:43:58] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:44:02] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:44:02] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:44:02] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:44:02] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:44:04] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:44:04] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:44:05] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:44:05] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:44:44] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:44:44] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:44:44] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:44:45] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:44:46] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:46:04] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:46:05] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:46:05] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:46:05] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:46:06] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:46:12] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:46:13] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:46:13] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:46:13] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:47:02] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:47:03] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:47:03] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:47:03] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+[2018-11-27 04:47:04,825] ERROR in app: Exception on /api/pred/months/ [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 2323, in get_attr
+    c_api.TF_OperationGetAttrValueProto(self._c_op, name, buf)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Operation 'lstm_1/while/mul_2' has no attr named '_XlaCompile'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py", line 403, in _MaybeCompile
+    xla_compile = op.get_attr("_XlaCompile")
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 2327, in get_attr
+    raise ValueError(str(e))
+ValueError: Operation 'lstm_1/while/mul_2' has no attr named '_XlaCompile'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "predAPI.py", line 65, in getPredMonth
+    pred = predMonth(args_month, args_lang, 12)
+  File "/home/ubuntu/predictTrend/Statistic-Lang/monthModel/predService.py", line 63, in predMonth
+    model = load_model(path + '/models/%smodel_avg.h5' % lang)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/saving.py", line 419, in load_model
+    model = _deserialize_model(f, custom_objects, compile)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/saving.py", line 317, in _deserialize_model
+    model._make_train_function()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/training.py", line 509, in _make_train_function
+    loss=self.total_loss)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/legacy/interfaces.py", line 91, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/optimizers.py", line 475, in get_updates
+    grads = self.get_gradients(loss, params)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/optimizers.py", line 89, in get_gradients
+    grads = K.gradients(loss, params)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 2757, in gradients
+    return tf.gradients(loss, variables, colocate_gradients_with_ops=True)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py", line 630, in gradients
+    gate_gradients, aggregation_method, stop_gradients)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py", line 814, in _GradientsHelper
+    lambda: grad_fn(op, *out_grads))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py", line 408, in _MaybeCompile
+    return grad_fn()  # Exit early
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py", line 814, in <lambda>
+    lambda: grad_fn(op, *out_grads))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py", line 940, in _MulGrad
+    rx, ry = gen_array_ops.broadcast_gradient_args(sx, sy)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/gen_array_ops.py", line 676, in broadcast_gradient_args
+    "BroadcastGradientArgs", s0=s0, s1=s1, name=name)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py", line 787, in _apply_op_helper
+    op_def=op_def)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py", line 488, in new_func
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3274, in create_op
+    op_def=op_def)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 1807, in __init__
+    self._control_flow_post_processing()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 1818, in _control_flow_post_processing
+    self._control_flow_context.AddOp(self)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/control_flow_ops.py", line 2481, in AddOp
+    self._AddOpInternal(op)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/control_flow_ops.py", line 2502, in _AddOpInternal
+    real_x = self.AddValue(x)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/control_flow_ops.py", line 2434, in AddValue
+    real_val = grad_ctxt.grad_state.GetRealValue(val)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/control_flow_ops.py", line 1146, in GetRealValue
+    history_value = cur_grad_state.AddForwardAccumulator(cur_value)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/ops/control_flow_ops.py", line 1053, in AddForwardAccumulator
+    return acc
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 4369, in __exit__
+    self._graph._pop_control_dependencies_controller(self)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 4390, in _pop_control_dependencies_controller
+    assert self._control_dependencies_stack[-1] is controller
+AssertionError
+135.0.239.119 - - [27/Nov/2018 04:47:04] "[1m[35mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 500 -
+[2018-11-27 04:47:04,840] ERROR in app: Exception on /api/pred/days/total/ [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "predAPI.py", line 87, in pred_Total
+    total = predTotal(int(args))
+  File "/home/ubuntu/predictTrend/Statistic-Lang/trendModel/predService.py", line 198, in predTotal
+    pre=model.predict(dataSequence)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/training.py", line 1169, in predict
+    steps=steps)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/training_arrays.py", line 294, in predict_loop
+    batch_outs = f(ins_batch)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 2697, in __call__
+    if hasattr(get_session(), '_make_callable_from_options'):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 199, in get_session
+    [tf.is_variable_initialized(v) for v in candidate_vars])
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1137, in _run
+    self._graph, fetches, feed_dict_tensor, feed_handles=feed_handles)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 484, in __init__
+    self._assert_fetchable(graph, fetch.op)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 497, in _assert_fetchable
+    'Operation %r has been marked as not fetchable.' % op.name)
+ValueError: Operation 'IsVariableInitialized_10' has been marked as not fetchable.
+135.0.239.119 - - [27/Nov/2018 04:47:04] "[1m[35mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 500 -
+135.0.239.119 - - [27/Nov/2018 04:48:25] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:49:48] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:49:48] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:49:48] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:49:48] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:49:50] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:50:10] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:50:10] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:50:10] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:50:10] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:50:57] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:50:57] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:50:57] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:50:57] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:51:47] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:51:47] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:51:47] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:51:47] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:51:49] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:52:02] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:52:02] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:52:02] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:52:03] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:52:05] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:52:06] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:52:06] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:52:06] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:55:45] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:55:45] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:55:45] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:55:45] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:56:56] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:56:56] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:56:56] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:56:56] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:56:57] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:57:46] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:57:46] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:57:46] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:57:46] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:57:47] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:58:19] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:58:19] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:58:19] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:58:19] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:58:20] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:58:22] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:59:09] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 04:59:30] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:00:08] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:00:08] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:00:08] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:00:08] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:00:09] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:00:11] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:00:20] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:00:20] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:00:20] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:00:21] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:00:53] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:00:54] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:00:54] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:00:54] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:00:55] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:00:57] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:00] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:00] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:00] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:01] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:23] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:23] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:23] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:23] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:24] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:26] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:29] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:29] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:29] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:29] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:32] "[37mGET /api/pred/months/?months=3&language=HTML HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:39] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:39] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:40] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:40] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:42] "[37mGET /api/pred/months/?months=3&language=Python HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:49] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:49] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:49] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:49] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:51] "[37mGET /api/pred/months/?months=3&language=Java HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:56] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:56] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:56] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:01:56] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:02:03] "[37mGET /api/pred/months/?months=3&language=Python HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:02:23] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:02:23] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:02:23] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:02:23] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:02:25] "[37mGET /api/pred/months/?months=3&language=Java HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:02] "[37mGET /api/monthavg/?timestamp=20151201 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:30] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:30] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:30] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:30] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:31] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:33] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:33] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:33] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:33] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:49] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:49] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:50] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:50] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:51] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:56] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:59] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:59] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:59] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:03:59] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:04:02] "[37mGET /api/pred/months/?months=3&language=TypeScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:04:05] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:04:05] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:04:05] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:04:05] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:04:08] "[37mGET /api/pred/months/?months=3&language=Python HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:04:39] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:04:39] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:04:40] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:04:40] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:04:41] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:04:48] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:04:51] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:04:51] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:04:51] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:04:51] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:04:54] "[37mGET /api/pred/months/?months=3&language=CSS HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:05:30] "[37mGET /api/pred/months/?months=3&language=CSS HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:05:32] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:05:32] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:05:32] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:05:32] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:05:36] "[37mGET /api/pred/months/?months=3&language=CSS HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:05] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:05] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:05] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:05] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:06] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:09] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:09] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:09] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:09] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:12] "[37mGET /api/pred/months/?months=3&language=Java HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:23] "[37mGET /api/pred/months/?months=3&language=Java HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:26] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:26] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:26] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:26] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:29] "[37mGET /api/pred/months/?months=3&language=Python HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:57] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:57] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:58] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:58] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:07:59] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:00] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:00] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:00] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:00] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+[2018-11-27 05:08:01,846] ERROR in app: Exception on /api/pred/months/ [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "predAPI.py", line 65, in getPredMonth
+    pred = predMonth(args_month, args_lang, 12)
+  File "/home/ubuntu/predictTrend/Statistic-Lang/monthModel/predService.py", line 63, in predMonth
+    model = load_model(path + '/models/%smodel_avg.h5' % lang)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/saving.py", line 417, in load_model
+    f = h5dict(filepath, 'r')
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/utils/io_utils.py", line 186, in __init__
+    self.data = h5py.File(path, mode=mode)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/h5py/_hl/files.py", line 269, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, swmr=swmr)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/h5py/_hl/files.py", line 99, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 78, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = '/home/ubuntu/predictTrend/Statistic-Lang/monthModel/models/Cmodel_avg.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+135.0.239.119 - - [27/Nov/2018 05:08:01] "[1m[35mGET /api/pred/months/?months=3&language=C HTTP/1.1[0m" 500 -
+[2018-11-27 05:08:12,669] ERROR in app: Exception on /api/pred/months/ [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "predAPI.py", line 65, in getPredMonth
+    pred = predMonth(args_month, args_lang, 12)
+  File "/home/ubuntu/predictTrend/Statistic-Lang/monthModel/predService.py", line 63, in predMonth
+    model = load_model(path + '/models/%smodel_avg.h5' % lang)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/saving.py", line 417, in load_model
+    f = h5dict(filepath, 'r')
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/utils/io_utils.py", line 186, in __init__
+    self.data = h5py.File(path, mode=mode)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/h5py/_hl/files.py", line 269, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, swmr=swmr)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/h5py/_hl/files.py", line 99, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 78, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = '/home/ubuntu/predictTrend/Statistic-Lang/monthModel/models/Cmodel_avg.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+135.0.239.119 - - [27/Nov/2018 05:08:12] "[1m[35mGET /api/pred/months/?months=3&language=C HTTP/1.1[0m" 500 -
+135.0.239.119 - - [27/Nov/2018 05:08:14] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:14] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:14] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:14] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:17] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:30] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:30] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:30] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:31] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:32] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:32] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:32] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:33] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:33] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:08:34] "[37mGET /api/pred/months/?months=3&language=C++ HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:13] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:13] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:13] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:13] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:15] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:15] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:16] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:16] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:16] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:24] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:24] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:24] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:24] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:26] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:31] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:31] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:31] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:31] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:34] "[37mGET /api/pred/months/?months=3&language=Java HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:39] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:39] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:39] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:39] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:42] "[37mGET /api/pred/months/?months=3&language=CSS HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:49] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:49] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:49] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:49] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:09:50] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:10:57] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:10:57] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:10:57] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:10:57] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:10:58] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:11:13] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:11:13] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:11:13] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:11:13] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:11:15] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:16:33] "[37mGET /api/monthavg/?timestamp=20151201 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:26:42] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:27:38] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:27:52] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:28:37] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:28:46] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:29:27] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:29:41] "[37mGET /api/monthavg/?timestamp=20181201 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:29:47] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:31:26] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+[2018-11-27 05:32:42,098] ERROR in app: Exception on /api/top10/ [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1092, in _run
+    subfeed, allow_tensor=True, allow_operation=False)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3490, in as_graph_element
+    return self._as_graph_element_locked(obj, allow_tensor, allow_operation)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3569, in _as_graph_element_locked
+    raise ValueError("Tensor %s is not an element of this graph." % obj)
+ValueError: Tensor Tensor("Placeholder:0", shape=(12, 40), dtype=float32) is not an element of this graph.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "predAPI.py", line 72, in pred_Top10
+    top10 = predTop10()
+  File "/home/ubuntu/predictTrend/Statistic-Lang/monthModel/predService.py", line 100, in predTop10
+    pred = predMonth(1, lang=lang, lookback=12)
+  File "/home/ubuntu/predictTrend/Statistic-Lang/monthModel/predService.py", line 63, in predMonth
+    model = load_model(path + '/models/%smodel_avg.h5' % lang)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/saving.py", line 419, in load_model
+    model = _deserialize_model(f, custom_objects, compile)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/saving.py", line 287, in _deserialize_model
+    K.batch_set_value(weight_value_tuples)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 2470, in batch_set_value
+    get_session().run(assign_ops, feed_dict=feed_dict)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1095, in _run
+    'Cannot interpret feed_dict key as Tensor: ' + e.args[0])
+TypeError: Cannot interpret feed_dict key as Tensor: Tensor Tensor("Placeholder:0", shape=(12, 40), dtype=float32) is not an element of this graph.
+135.0.239.119 - - [27/Nov/2018 05:32:42] "[1m[35mGET /api/top10/ HTTP/1.1[0m" 500 -
+[2018-11-27 05:32:42,229] ERROR in app: Exception on /api/top10/ [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "predAPI.py", line 72, in pred_Top10
+    top10 = predTop10()
+  File "/home/ubuntu/predictTrend/Statistic-Lang/monthModel/predService.py", line 100, in predTop10
+    pred = predMonth(1, lang=lang, lookback=12)
+  File "/home/ubuntu/predictTrend/Statistic-Lang/monthModel/predService.py", line 76, in predMonth
+    pre = model.predict(dataSequence)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/training.py", line 1169, in predict
+    steps=steps)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/engine/training_arrays.py", line 294, in predict_loop
+    batch_outs = f(ins_batch)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 2715, in __call__
+    return self._call(inputs)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 2675, in _call
+    fetched = self._callable_fn(*array_vals)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1439, in __call__
+    run_metadata_ptr)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/tensorflow/python/framework/errors_impl.py", line 528, in __exit__
+    c_api.TF_GetCode(self.status.status))
+tensorflow.python.framework.errors_impl.FailedPreconditionError: Attempting to use uninitialized value dense_1/bias
+	 [[{{node dense_1/bias/read}} = Identity[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:CPU:0"](dense_1/bias)]]
+135.0.239.119 - - [27/Nov/2018 05:32:42] "[1m[35mGET /api/top10/ HTTP/1.1[0m" 500 -
+135.0.239.119 - - [27/Nov/2018 05:33:09] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+61.151.207.205 - - [27/Nov/2018 05:33:25] "[32mGET /api/top10 HTTP/1.1[0m" 301 -
+61.151.207.205 - - [27/Nov/2018 05:33:40] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:36:31] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:36:46] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:37:05] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:37:18] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:37:19] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:37:26] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:37:48] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:37:58] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:38:14] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:38:24] "[37mGET /api/monthavg/?timestamp=20170801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:38:41] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:39:50] "[37mGET /api/monthavg/?timestamp=20170701 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:40:06] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:40:32] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:43:07] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:43:07] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:43:07] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:43:08] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:43:09] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:43:12] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:43:19] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:43:35] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:43:58] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:44:16] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:44:24] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:44:24] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:44:24] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:44:24] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:44:26] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:44:32] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:44:32] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:44:32] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:44:32] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:44:35] "[37mGET /api/pred/months/?months=3&language=TypeScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:52:02] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:52:02] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:52:02] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:52:02] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:52:04] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:52:15] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:52:18] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:52:18] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:52:18] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:52:18] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:52:21] "[37mGET /api/pred/months/?months=3&language=CSS HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:52:31] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:52:35] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:52:52] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:53:20] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:53:21] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:53:21] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:53:21] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:53:22] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:58:27] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:58:27] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:58:27] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:58:27] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 05:58:29] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:04:38] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:04:38] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:04:38] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:04:38] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:04:39] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:04:47] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:04:50] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:04:50] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:04:50] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:04:50] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:04:53] "[37mGET /api/pred/months/?months=3&language=TypeScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:05:17] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:05:24] "[37mGET /api/monthavg/?timestamp=20150901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:06:27] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:06:27] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:06:27] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:06:28] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:06:29] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:06:44] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:06:50] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:06:50] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:06:50] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:06:50] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:06:54] "[37mGET /api/pred/months/?months=3&language=TypeScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:06:56] "[37mGET /api/pred/months/?months=3&language=TypeScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:07:12] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:07:30] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:08:22] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 06:08:28] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 07:41:09] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 07:41:09] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 07:41:09] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 07:41:10] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 07:41:11] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 07:41:21] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 07:41:21] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 07:41:22] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 07:41:22] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 07:41:25] "[37mGET /api/pred/months/?months=3&language=HTML HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 07:41:31] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 07:41:31] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 07:41:31] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 07:41:31] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 07:41:34] "[37mGET /api/pred/months/?months=3&language=Python HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 07:41:35] "[37mGET /api/pred/months/?months=3&language=Python HTTP/1.1[0m" 200 -
+[2018-11-27 07:41:43,161] ERROR in app: Exception on /api/monthavg/ [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "predAPI.py", line 80, in getMonthAvg
+    get = getAverage(args_month)
+  File "/home/ubuntu/predictTrend/Statistic-Lang/monthModel/predService.py", line 115, in getAverage
+    timestamp = datetime.datetime.strptime(str(timestamp), "%Y%m%d")
+  File "/home/ubuntu/anaconda3/lib/python3.6/_strptime.py", line 565, in _strptime_datetime
+    tt, fraction = _strptime(data_string, format)
+  File "/home/ubuntu/anaconda3/lib/python3.6/_strptime.py", line 362, in _strptime
+    (data_string, format))
+ValueError: time data '1' does not match format '%Y%m%d'
+135.0.239.119 - - [27/Nov/2018 07:41:43] "[1m[35mGET /api/monthavg/?timestamp=01 HTTP/1.1[0m" 500 -
+135.0.239.119 - - [27/Nov/2018 07:41:48] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 07:42:10] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+5.101.66.61 - - [27/Nov/2018 08:49:59] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.7.0')
+5.101.66.61 - - [27/Nov/2018 08:49:59] "[1m[35mSSH-2.0-libssh2_1.7.0[0m" HTTPStatus.BAD_REQUEST -
+135.0.239.119 - - [27/Nov/2018 13:23:03] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 13:23:19] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 13:29:17] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 13:29:17] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 13:29:17] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 13:29:17] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 13:29:18] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 13:29:35] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 13:29:35] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 13:29:35] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 13:29:36] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+135.0.239.119 - - [27/Nov/2018 13:29:39] "[37mGET /api/pred/months/?months=3&language=TypeScript HTTP/1.1[0m" 200 -
+198.44.228.112 - - [27/Nov/2018 15:18:57] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:18:57] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:18:58] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:18:58] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:00] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:00] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:01] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:01] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:01] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:01] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:02] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:02] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:03] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:03] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:03] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:03] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:04] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:04] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:05] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:05] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:05] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:05] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:06] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:06] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:07] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:07] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:07] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:07] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:08] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:08] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:09] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:09] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:09] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:09] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:10] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:10] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:11] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:11] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:11] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:11] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:12] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:12] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:13] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:13] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:13] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:13] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:14] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:14] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:15] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:15] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:15] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:15] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:16] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:16] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:17] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:17] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:17] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:17] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:18] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:18] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:19] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:19] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:19] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:19] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:20] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:20] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:21] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:21] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:21] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:21] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:22] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:22] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:23] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:23] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:23] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:23] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:24] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:24] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:25] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:25] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:25] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:25] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:26] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:26] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:27] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:27] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:27] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:27] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:28] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:28] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:29] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:29] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:29] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:29] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:30] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:30] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:31] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:31] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:31] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:31] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+198.44.228.112 - - [27/Nov/2018 15:19:32] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+198.44.228.112 - - [27/Nov/2018 15:19:32] "[1m[35mSSH-2.0-libssh2_1.4.3[0m" HTTPStatus.BAD_REQUEST -
+132.205.11.40 - - [27/Nov/2018 15:40:10] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 15:40:10] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 15:40:10] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 15:40:10] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 15:40:11] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 15:42:25] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 15:42:43] "[37mGET /api/top10/ HTTP/1.1[0m" 200 -
+132.205.229.176 - - [27/Nov/2018 16:11:33] "[37mGET /api/pred/days/total/?days=7 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 16:49:01] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 16:49:01] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 16:49:01] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 16:49:01] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 16:49:02] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 16:50:01] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 16:51:17] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 16:59:17] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 16:59:18] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 16:59:18] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 16:59:18] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 16:59:19] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:02:41] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:25:39] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:25:39] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:25:39] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:25:39] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:25:41] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:34:52] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:34:52] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:34:52] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:34:53] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:34:54] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:44:54] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:44:54] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:44:54] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:44:54] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:44:55] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:45:03] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:45:03] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:45:03] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:45:03] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:45:04] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:45:07] "[37mGET /api/pred/months/?months=3&language=JavaScript HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:50:20] "[37mGET /api/monthavg/?timestamp=20180801 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:50:20] "[37mGET /api/monthavg/?timestamp=20180901 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:50:20] "[37mGET /api/monthavg/?timestamp=20181001 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:50:20] "[37mGET /api/monthavg/?timestamp=20181101 HTTP/1.1[0m" 200 -
+132.205.11.40 - - [27/Nov/2018 17:50:22] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
+132.205.229.176 - - [27/Nov/2018 18:09:57] "[37mGET /api/pred/days/?days=5&language=Python HTTP/1.1[0m" 200 -
+132.205.229.176 - - [27/Nov/2018 18:10:03] "[37mGET /api/pred/days/?days=5&language=Java HTTP/1.1[0m" 200 -
+185.156.177.43 - - [27/Nov/2018 19:03:47] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+185.156.177.43 - - [27/Nov/2018 19:03:47] "[1m[35m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
