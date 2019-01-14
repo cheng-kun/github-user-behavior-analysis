@@ -1,0 +1,9 @@
+[Database]
+host = "database-server-host"
+username = "database-instance-username"
+password = "database-instance-password"
+dbname = "database-instance-name"
+
+[[githubcredentials]]
+account = "github-account"
+token = "registered-token"

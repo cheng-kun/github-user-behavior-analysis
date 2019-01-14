@@ -2,3 +2,5 @@
 *.xml
 *.log
 ./data
+*.toml
+!config_template.toml
