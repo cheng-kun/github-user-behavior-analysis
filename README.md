@@ -1,5 +1,5 @@
 # github-user-behavior-analysis
-(demo: www.youtube.com/watch?v=mqpxhWz8PGI&t=4s)
+(demo link: https://youtu.be/NMpFh3Cj5ck)
 
 Retrieved data from Github official APIs and the third party provider, and used MapReduce and Google BigQuery to perform data analysis to understand GitHub user behavior and present interesting insights
 
