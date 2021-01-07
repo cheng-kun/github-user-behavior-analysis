@@ -1,1 +1,2 @@
-static/* linguist-vendored
+*.jl linguist-detectable=false
+*.go linguist-detectable=true
